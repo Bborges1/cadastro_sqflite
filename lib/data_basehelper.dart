@@ -69,7 +69,7 @@ Future<int?> queryRowCount() async {
 }
 //Assumimos aqui que a coluna id no mapa esta definida. Os outros 
 //valores da colunas serão usados para atualizar a linha. 
-Future<int> updated (Map<String, dynamic> row) async {
+Future<int> update (Map<String, dynamic> row) async {
   Database db = await instance.database;
   int id = row[columnId];
   return await db.update(table, row,where: '$columnId = ?',
